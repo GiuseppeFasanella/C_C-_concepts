@@ -1,31 +1,19 @@
-// root -l plotter_smearing.C                                                                                                                                           
+//Leggere da file
+#include <fstream> 
+ifstream infile;
+infile.open("my_file.txt");
+double g=0;
 
-plotter_smearing(){
-  ifstream infile;
-  //infile.open("tmp/Smearing.txt");                                                                                                                                            
-  infile.open("tmp/Smearing_afterFullProcedure.txt");
+if (infile.is_open()){
+  cout<<"File aperto"<<endl;
+ }
 
-  TH1F* gauss=new TH1F("gauss","gauss",100,-3,3);
+while ( infile.good() ){
+  infile>>g;
+  cout<<"g is "<<g;
+ }
+infile.close();
 
-  double g=0;
-
-  if (infile.is_open())
-    {
-    cout<<"File aperto"<<endl;
-      while ( infile.good() )
-        {
-          infile>>g;
-          gauss->Fill(g);
-        }
-      infile.close();
-    }
-
-
-
-   gauss->Draw();
-   infile.close();
-
-}
 
 //Scrivere su file
 #include <fstream> 
