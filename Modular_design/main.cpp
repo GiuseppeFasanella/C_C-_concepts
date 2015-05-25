@@ -1,23 +1,28 @@
+//Main program. All the complexity goes in the classes, so the "main" part is very easy
+# include <Temperature.h>
+# include <iostream>
 
-// main.cpp
-#include<iostream>
-#include"myfunc.h"
+main(){
 
-int main() {
+  Temperature t;
+  t.SetC(20);
+  std::cout<<t.GetC()<<std::endl;
+  std::cout<<t.GetC(2)<<std::endl;
+  Temperature t2;
+  t2.SetC(21);
+  std::cout<<"t1 and t2 are equal? "<<(t2==t)<<std::endl;
 
-  int a=6;
-  int b=3;
-  
-  std::cout<<"a="<<a<<", b="<<b<<'\n';
-  std::cout<<"a/b="<<div(a,b)<<'\n';
-  std::cout<<"a*b="<<mul(a,b)<<'\n';
-
-  return 0; 
 }
 
+/*Compilation procedure:
+*****First step you compile your classes
+c++ -c -I. Temperature.cc
 
-//compile this with
+*****Then you compile the main and link the classes
+c++ -I. main.cpp Temperature.o -o main.exe
 
-//g++ -lm -Wall -g -o prova main.cpp myfunc.cpp
+*****Enjoy
+./main.exe
 
-//Si noti che il file myfunc.h non appare nella riga di comando, verra' incluso dal gcc in fase di precompilazione
+
+*/
