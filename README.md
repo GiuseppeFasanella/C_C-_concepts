@@ -5,7 +5,7 @@ My recipes to handle C&amp;C++ workflow
 
 g++ -o out.exe main.cpp
 
-* compile a simple *C* code like this:
+* compile a simple **C** code like this:
 
 gcc -lm -o out.exe main.c
 
