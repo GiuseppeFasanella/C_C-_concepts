@@ -1,11 +1,11 @@
 # C_C++_concepts
 My recipes to handle C&amp;C++ workflow
 
-* compile a simple cpp code like this:
+* compile a simple **cpp** code like this:
 
 g++ -o out.exe main.cpp
 
-* compile a simple C code like this:
+* compile a simple *C* code like this:
 
 gcc -lm -o out.exe main.c
 
