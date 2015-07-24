@@ -31,6 +31,12 @@ main(){
     i++;
   }
 
+//2D vectors
+
+* vector<vector<int>> a; //a is a pointer to a vector of vector of int
+(*a)[i][j]; //(*a) is a vector of vector of int. * has the lowest priority
+a->at(i)[j];
+
 }
 
 //Compile with 
