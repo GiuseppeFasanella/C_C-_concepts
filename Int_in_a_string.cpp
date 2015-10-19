@@ -17,6 +17,8 @@ float f = std::stof(sf);
 
 #### Numeric to string 
 std::string s = std::to_string(42);
+//A questo punto puoi castare la stringa in una TString cosi' e' piu' facile da usare in root
+UnaTString+TString(s)+".root"; //qualcosa del genere e funziona
 
 ## Puoi fare anche cosi', ma mi piace molto meno
 TString varName="";
