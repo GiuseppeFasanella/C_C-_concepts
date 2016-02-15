@@ -8,11 +8,15 @@ if (infile.is_open()){
   cout<<"File aperto"<<endl;
  }
 
-while ( infile.good() ){
-  infile>>g;
-  cout<<"g is "<<g;
- }
+while (infile >>g){//Questo e' il modo corretto di leggere un file
+  std::cout<<g<<std::endl;
+}
 infile.close();
+
+//while ( infile.good() ){//Questo NON e' corretto perche' stampa 2 volte l'ultima riga
+  //infile>>g;
+  //cout<<"g is "<<g;
+ //}
 
 
 //Scrivere su file
